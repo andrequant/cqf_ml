@@ -5,7 +5,7 @@ tf.logging.set_verbosity(tf.logging.ERROR)
 mean = data['returns'].mean()
 std = data['returns'].std()
 print(mean, std)
-fc = tf.contrib.layers.real_valued_column('returns', dimension=lags)
+
 
 fcb = [tf.contrib.layers.bucketized_column(fc,
                     boundaries=[-0.0005, 0.0001, 0.0005])]
